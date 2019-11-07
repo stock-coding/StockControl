@@ -10,7 +10,7 @@ public class StockItem {
     String fixedStockCode;
     int quantity;
     double price;
-    final static double VAT=17.5;
+    final static double VAT = 17.5;
 
     public StockItem(int quantity, double price, String stockCode){
         this.quantity = quantity;
@@ -27,7 +27,7 @@ public class StockItem {
     }
     
     public void setPrice(double newPrice){
-        
+        price = newPrice;
     }
 
     public double getPrice(){
@@ -39,19 +39,30 @@ public class StockItem {
     }
 
     public String getStockDescription(){
-        
+        return "Unknown Stock Description";
     }
 
     public void addStock(int quantity){
         
     }
 
-    public void sellStock(int quantity){
+    public boolean sellStock(int quantity){
         
+        if(quantity > this.quantity)
+        {
+            System.out.printf("Error: tried to sell %d items but there were "
+                    + "only %d in stock!\n", quantity, this.quantity);
+            return false;
+        }
+        else
+        {
+            this.quantity -= quantity;
+            return true;
+        }
     }
 
     public static double getVAT(){
-        
+        return VAT;
     }
 
     public double getVATPrice(){
