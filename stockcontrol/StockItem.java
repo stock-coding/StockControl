@@ -1,72 +1,66 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package stockPackage1;
+
+package stockcontrol;
 
 /**
  *
  * @author George Adams
+ * @author Thomas Merchant
  */
 public class StockItem {
     String fixedStockCode;
-    int amountInStock;
+    int quantity;
     double price;
-    final double VAT=17.5;
-    StockItem(int amount,double itemPrice,String stockCode){
-        amountInStock=amount;
-        price=itemPrice;
-        fixedStockCode=stockCode;
+    final static double VAT=17.5;
+
+    public StockItem(int quantity, double price, String stockCode){
+        this.quantity = quantity;
+        this.price = price;
+        this.fixedStockCode = stockCode;
     }
-    StockItem(){
-        fixedStockCode = "Unknown Item";
-        price=0.00;
-        amountInStock=0;
-    }
-    public void setStockCode(){
+
+    public String getStockCode(){
         
     }
-    public void getStockCode(){
+
+    public int getQuantity(){
         
     }
-    public void getAmountInStock(){
-        
-    }
-    public void setAmountInStock(){
-        
-    }
-    public void setPrice(){
-        
-    }
-    public void getPrice(){
-        
-    }
-    public void setDescription(){
-        
-    }
-    public void getDescription(){
-        
-    }
-    public void addStock(){
-        
-    }
-    public void sellStock(){
-        
-    }
-    public void getVAT(){
-        
-    }
-    public void getVATPrice(){
-        
-    }
-        
     
+    public void setPrice(double newPrice){
+        
+    }
 
-public static void main(String[] args){
+    public double getPrice(){
+        
+    }
 
-   
-}
+    public String getStockName(){
+        
+    }
+
+    public String getStockDescription(){
+        
+    }
+
+    public void addStock(int quantity){
+        
+    }
+
+    public void sellStock(int quantity){
+        
+    }
+
+    public static double getVAT(){
+        
+    }
+
+    public double getVATPrice(){
+        
+    }
+
+    public String toString(){
+        
+    }
 }
 
 
