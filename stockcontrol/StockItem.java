@@ -48,7 +48,12 @@ public class StockItem {
 
     public boolean sellStock(int quantity){
         
-        if(quantity > this.quantity)
+	if(quantity < 0)
+        {
+            System.out.println("Error: tried to sell negative stock!");
+            return false;
+        }
+        else if(quantity > this.quantity)
         {
             System.out.printf("Error: tried to sell %d items but there were "
                     + "only %d in stock!\n", quantity, this.quantity);
