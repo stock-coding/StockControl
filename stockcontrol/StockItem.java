@@ -31,7 +31,7 @@ public class StockItem {
     }
 
     public double getPrice(){
-        
+        return price;
     }
 
     public String getStockName(){
