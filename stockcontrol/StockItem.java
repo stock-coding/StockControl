@@ -42,10 +42,20 @@ public class StockItem {
         return "Unknown Stock Description";
     }
 
-    public void addStock(int quantity){
-        
+    public boolean addStock(int quantity){
+     if(quantity<2){         
+         System.out.println("Error: must add more than 1 stock");
+         return false;
+     }
+     else if((quantity+this.quantity)>100){
+         System.out.println("Error: Can't have more than 100 total stock");
+         return false;
+     }
+     else { 
+         this.quantity += quantity;
+         return true;
     }
-
+    }
     public boolean sellStock(int quantity){
         
 	if(quantity < 0)
@@ -75,7 +85,7 @@ public class StockItem {
     }
 
     public String toString(){
-        
+        // to do
     }
 }
 
