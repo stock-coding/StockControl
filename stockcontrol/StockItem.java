@@ -43,7 +43,7 @@ public class StockItem {
     }
 
     public boolean addStock(int quantity){
-     if(quantity<2){         
+     if(quantity<1){         
          System.out.println("Error: must add more than 1 stock");
          return false;
      }
