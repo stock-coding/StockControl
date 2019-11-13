@@ -43,18 +43,18 @@ public class StockItem {
     }
 
     public boolean addStock(int quantity){
-     if(quantity<1){         
-         System.out.println("Error: must add more than 1 stock");
-         return false;
-     }
-     else if((quantity+this.quantity)>100){
-         System.out.println("Error: Can't have more than 100 total stock");
-         return false;
-     }
-     else { 
-         this.quantity += quantity;
-         return true;
-    }
+        if(quantity<1){         
+            System.out.println("Error: must add more than 1 stock");
+            return false;
+        }
+        else if((quantity+this.quantity)>100){
+            System.out.println("Error: Can't have more than 100 total stock");
+            return false;
+        }
+        else { 
+            this.quantity += quantity;
+            return true;
+        }
     }
     public boolean sellStock(int quantity){
         
