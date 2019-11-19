@@ -19,7 +19,7 @@ public class StockItem {
     }
 
     public String getStockCode(){
-        
+        return fixedStockCode;
     }
 
     public int getQuantity(){
