@@ -19,7 +19,7 @@ public class StockItem {
     }
 
     public String getStockCode(){
-        
+        return fixedStockCode;
     }
 
     public int getQuantity(){
@@ -83,9 +83,15 @@ public class StockItem {
     public double getVATPrice(){
         
     }
-
+   
+    @Override
     public String toString(){
-        // to do
+        return  fixedStockCode + "," +
+                getStockName() + "," +
+                getStockDescription() + "," +
+                quantity + "," +
+                price + "," +
+                getVATPrice() + ",";
     }
 }
 
