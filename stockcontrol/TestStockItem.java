@@ -99,6 +99,19 @@ class TestStockItem
                     "sellStock is functioning in the base case"
                     : "Expected quantity to be 1, got" + testItem.quantity;
                 break;
+            case 5:
+                /* Test 6 */
+                input = new Scanner(System.in);
+                boolean returned;
+                name = "Verifying StockItem.sellStock() not enough stock";
+                System.out.println(name);
+                testItem = new StockItem(1, 1, "test");
+                returned = testItem.sellStock(2);
+                System.out.print("Did you see an error? [Y/n] ");
+                message = (passed = input.hasNext("[Yy]")) && !returned ?
+                    "sellStock is functioning in the not enough stock case"
+                    : "sellStock failed in the not enough stock case, returned " + returned;
+                break;
             default:
                 passed = false;
                 name    = "Unimplemented test";
