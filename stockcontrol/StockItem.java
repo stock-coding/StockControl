@@ -23,7 +23,7 @@ public class StockItem {
     }
 
     public int getQuantity(){
-        
+        return quantity;
     }
     
     public void setPrice(double newPrice){
@@ -35,7 +35,7 @@ public class StockItem {
     }
 
     public String getStockName(){
-        
+        return "Unknown Stock Name";
     }
 
     public String getStockDescription(){
@@ -81,7 +81,7 @@ public class StockItem {
     }
 
     public double getVATPrice(){
-        
+      return ((VAT/100.0+1)*price);
     }
    
     @Override
