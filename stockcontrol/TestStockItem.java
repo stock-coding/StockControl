@@ -34,7 +34,7 @@ class TestStockItem
     private static TestResult runTest(int testNum)
     {
         StockItem testItem;
-        boolean passed;
+        boolean passed, returned;
         String message;
         String name;
         Scanner input;
@@ -89,7 +89,6 @@ class TestStockItem
                 break;
             case 4:
                 /* Test 5 */
-                boolean returned;
                 name = "Verifying StockItem.sellStock() base case";
                 System.out.println(name);
                 testItem = new StockItem(3, 1, "test");
@@ -102,7 +101,6 @@ class TestStockItem
             case 5:
                 /* Test 6 */
                 input = new Scanner(System.in);
-                boolean returned;
                 name = "Verifying StockItem.sellStock() not enough stock";
                 System.out.println(name);
                 testItem = new StockItem(1, 1, "test");
