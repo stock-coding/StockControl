@@ -11,7 +11,7 @@ package stockcontrol;
  */
 public class EngineOil extends StockItem{
     
-    EngineOil(int quantity, float price, String stockCode) {
+    public EngineOil(int quantity, float price, String stockCode) {
         super(quantity,price,stockCode);
     }
 

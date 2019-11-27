@@ -11,7 +11,7 @@ package stockcontrol;
  */
 public class AirFreshener extends StockItem {
     
-    AirFreshener(int quantity, float price, String stockCode) {
+    public AirFreshener(int quantity, float price, String stockCode) {
         super(quantity,price,stockCode);
     }
     
