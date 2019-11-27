@@ -6,16 +6,14 @@
 package stockcontrol;
 
 /**
- *
+ * A StockItem representing the product "Easy breathe Air Freshener"
  * @author g5-adams
  */
 public class AirFreshener extends StockItem {
     
-    AirFreshener(int quantity, float price, String stockCode) {
+    public AirFreshener(int quantity, float price, String stockCode) {
         super(quantity,price,stockCode);
     }
-
-   
     
     @Override
     public String getStockName() {
