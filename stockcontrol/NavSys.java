@@ -6,18 +6,15 @@
 package stockcontrol;
 
 /**
- *
+ * A StockItem representing the product "GeoVision Sat Nav"
  * @author g5-adams
  */
 public class NavSys extends StockItem {
-
     
     NavSys(int quantity, float price, String stockCode) {
         super(quantity,price,stockCode);
     }
 
-   
-    
     @Override
     public String getStockName() {
         return "Navigation system";
