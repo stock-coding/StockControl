@@ -44,7 +44,7 @@ public class StockItem {
 
     public boolean addStock(int quantity){
         if(quantity<1){         
-            System.out.println("Error: must add more than 1 stock");
+            System.out.println("Error: must add at least 1 stock");
             return false;
         }
         else if((quantity+this.quantity)>100){
