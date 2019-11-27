@@ -12,7 +12,7 @@ package stockcontrol;
 public class NavSys extends StockItem {
 
     
-    NavSys(int quantity, double price, String stockCode) {
+    NavSys(int quantity, float price, String stockCode) {
         super(quantity,price,stockCode);
     }
 

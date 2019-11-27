@@ -86,12 +86,12 @@ public class StockItem {
    
     @Override
     public String toString(){
-        return  fixedStockCode + "," +
-                getStockName() + "," +
-                getStockDescription() + "," +
-                quantity + "," +
-                price + "," +
-                getVATPrice() + ",";
+        return  "Stock code: " + fixedStockCode + "," +
+                "\nStock name: " + getStockName() + "," +
+                "\nStock description: " + getStockDescription() + "," +
+                "\nStock quantity: " + quantity + "," +
+                "\nStock price: £" + price + "," +
+                "\nStock price including VAT: £" + getVATPrice() + ",";
     }
 }
 
