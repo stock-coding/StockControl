@@ -23,7 +23,7 @@ public class AirFreshener extends StockItem {
     }
     @Override
     public String getStockDescription() {
-        return "GeoVision Sat Nav";
+        return "Easy breathe Air Freshener";
     }    
 
     @Override
