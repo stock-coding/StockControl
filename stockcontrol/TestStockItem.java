@@ -3,6 +3,11 @@ package stockcontrol;
 
 import java.util.Scanner;
 
+/**
+ * Class that represents a Test Result and keeps track of the total
+ * tests passed and failed
+ * @author Thomas Merchant
+ */
 class TestResult
 {
     //Declaring Variables
@@ -29,6 +34,7 @@ class TestResult
 
 /**
 * Tests the implementation of the StockItem Class
+* @author Thomas Merchant
 */
 class TestStockItem
 {
