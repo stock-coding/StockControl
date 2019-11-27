@@ -9,10 +9,10 @@ package stockcontrol;
 public class StockItem {
     String fixedStockCode;
     int quantity;
-    double price;
-    final static double VAT = 17.5;
+    float price;
+    final static float VAT = 17.5f;
 
-    public StockItem(int quantity, double price, String stockCode){
+    public StockItem(int quantity, float price, String stockCode){
         this.quantity = quantity;
         this.price = price;
         this.fixedStockCode = stockCode;
@@ -26,11 +26,11 @@ public class StockItem {
         return quantity;
     }
     
-    public void setPrice(double newPrice){
+    public void setPrice(float newPrice){
         price = newPrice;
     }
 
-    public double getPrice(){
+    public float getPrice(){
         return price;
     }
 
@@ -76,12 +76,12 @@ public class StockItem {
         }
     }
 
-    public static double getVAT(){
+    public static float getVAT(){
         return VAT;
     }
 
-    public double getVATPrice(){
-      return ((VAT/100.0+1)*price);
+    public float getVATPrice(){
+      return ((VAT/100.0f+1)*price);
     }
    
     @Override
