@@ -46,9 +46,9 @@ class TestStockItem
                 System.out.println(name);
                 testItem = new StockItem(1, 1, "test");
                 testItem.addStock(2);
-                message = (passed = testItem.quantity == 3) ?
+                message = (passed = testItem.getQuantity() == 3) ?
                     "addStock is functioning in the base case"
-                    : "Expected quantity to be 3, got" + testItem.quantity;
+                    : "Expected quantity to be 3, got" + testItem.getQuantity();
                 break;
             case 1:
                 /* Test 2 */
@@ -61,7 +61,7 @@ class TestStockItem
                 message = (passed = input.hasNext("[Yy]")) ?
                     "addStock is functioning in the excess stock case"
                     : "addStock didn't show an error message, quantity: "
-                      + testItem.quantity;
+                      + testItem.getQuantity();
                 break;
             case 2:
                /* Test 3 */
@@ -69,9 +69,9 @@ class TestStockItem
                 System.out.println(name);
                 testItem = new StockItem(99, 1, "test");
                 testItem.addStock(1);
-                message = (passed = testItem.quantity == 100) ?
+                message = (passed = testItem.getQuantity() == 100) ?
                     "addStock is functioning in the base case"
-                    : "Expected quantity to be 100, got" + testItem.quantity;
+                    : "Expected quantity to be 100, got" + testItem.getQuantity();
                 break;
             case 3:
                 /* Test 4 */
@@ -84,7 +84,7 @@ class TestStockItem
                 message = (passed = input.hasNext("[Yy]")) ?
                     "addStock is functioning in the negative stock case"
                     : "addStock didn't show an error message, quantity: "
-                      + testItem.quantity;
+                      + testItem.getQuantity();
                 break;
             case 4:
                 /* Test 5 */
@@ -92,10 +92,10 @@ class TestStockItem
                 System.out.println(name);
                 testItem = new StockItem(3, 1, "test");
                 returned = testItem.sellStock(2);
-                message = (passed = (testItem.quantity == 1
+                message = (passed = (testItem.getQuantity() == 1
                                     && returned)) ?
                     "sellStock is functioning in the base case"
-                    : "Expected quantity to be 1, got" + testItem.quantity;
+                    : "Expected quantity to be 1, got" + testItem.getQuantity();
                 break;
             case 5:
                 /* Test 6 */
@@ -141,6 +141,7 @@ class TestStockItem
                 message = (passed = input.hasNext("[Yy]")) ?
                     "toString is functioning"
                     : "toString is not functioning";
+                break;
             case 9:
                 /* Test 10 */
                 name = "Verifying StockItem.getPrice()";
@@ -186,7 +187,6 @@ class TestStockItem
     {
         int NUMTESTS = 12, i;
         TestResult[] results = new TestResult[NUMTESTS];
-        StockItem testItem;
 
         for(i = 0; i < NUMTESTS; i++)
         {

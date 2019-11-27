@@ -7,10 +7,10 @@ package stockcontrol;
  * @author Thomas Merchant
  */
 public class StockItem {
-    String fixedStockCode;
-    int quantity;
-    float price;
-    final static float VAT = 17.5f;
+    private String fixedStockCode;
+    private int quantity;
+    private float price;
+    private final static float VAT = 17.5f;
 
     public StockItem(int quantity, float price, String stockCode){
         this.quantity = quantity;
