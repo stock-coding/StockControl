@@ -35,8 +35,7 @@ class TestStockItem
     {
         StockItem testItem;
         boolean passed, returned;
-        String message;
-        String name;
+        String message, name;
         Scanner input;
         
         switch(testNum)
@@ -109,6 +108,27 @@ class TestStockItem
                 message = (passed = input.hasNext("[Yy]")) && !returned ?
                     "sellStock is functioning in the not enough stock case"
                     : "sellStock failed in the not enough stock case, returned " + returned;
+                break;
+            case 6:
+                /* Test 7 */
+                input = new Scanner(System.in);
+                name = "Verifying StockItem.sellStock() selling negative stock";
+                System.out.println(name);
+                testItem = new StockItem(1, 1, "test");
+                returned = testItem.sellStock(-1);
+                System.out.print("Did you see an error? [Y/n] ");
+                message = (passed = input.hasNext("[Yy]")) && !returned ?
+                    "sellStock is functioning in the negative stock case"
+                    : "sellStock failed in the negative stock case, returned " + returned;
+                break;
+            case 7:
+                /* Test 8 */
+                name = "Verifying StockItem.getVAT()";
+                System.out.println(name);
+                double VAT = StockItem.getVAT();
+                message = ((passed = VAT == 17.5) ? 
+                    "StockItem.getVAT() is functioning"
+                    : "StockItem.getVAT() is returning " + VAT);
                 break;
             default:
                 passed = false;
