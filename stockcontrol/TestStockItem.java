@@ -130,6 +130,45 @@ class TestStockItem
                     "StockItem.getVAT() is functioning"
                     : "StockItem.getVAT() is returning " + VAT);
                 break;
+            case 8:
+                /* Test 9 */
+                input = new Scanner(System.in);
+                name = "Verifying StockItem.toString()";
+                System.out.println(name);
+                testItem = new StockItem(10, 5.5f, "A1");
+                System.out.println(testItem);
+                System.out.print("Did you see an adequate textual representation? [Y/n] ");
+                message = (passed = input.hasNext("[Yy]")) ?
+                    "toString is functioning"
+                    : "toString is not functioning";
+            case 9:
+                /* Test 10 */
+                name = "Verifying StockItem.getPrice()";
+                System.out.println(name);
+                testItem = new StockItem(1, 4.85f, "test");
+                message = (passed = testItem.getPrice() == 4.85f) ?
+                    "getPrice is working"
+                    : "getPrice is not working, returned " + testItem.getPrice();
+                break;
+            case 10:
+                /* Test 11 */
+                name = "Verifying StockItem.getVATPrice()";
+                System.out.println(name);
+                testItem = new StockItem(1, 4.85f, "test");
+                message = (passed = testItem.getVATPrice() == 5.7f) ?
+                    "getVATPrice is working"
+                    : "getVATPrice is not working, expected 5.7, returned " + testItem.getPrice();
+                break;
+            case 11:
+                /* Test 12 */
+                name = "Verifying StockItem.setPrice()";
+                System.out.println(name);
+                testItem = new StockItem(1, 8.88f, "test");
+                testItem.setPrice(8.88f);
+                message = (passed = testItem.getPrice() == 8.88f) ?
+                    "setPrice is working"
+                    : "setPrice is not working, expected 8.88, got " + testItem.getPrice();
+                break;
             default:
                 passed = false;
                 name    = "Unimplemented test";
@@ -145,7 +184,7 @@ class TestStockItem
 
     public static void main(String[] args)
     {
-        int NUMTESTS = 13, i;
+        int NUMTESTS = 12, i;
         TestResult[] results = new TestResult[NUMTESTS];
         StockItem testItem;
 
