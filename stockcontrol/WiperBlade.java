@@ -23,7 +23,7 @@ public class WiperBlade extends StockItem {
     }
     @Override
     public String getStockDescription() {
-        return "GeoVision Sat Nav";
+        return "Easy wipe wiper blade";
     }    
 
     @Override
