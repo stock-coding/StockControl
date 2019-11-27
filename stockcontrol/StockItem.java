@@ -81,7 +81,7 @@ public class StockItem {
     }
 
     public float getVATPrice(){
-      return ((VAT/100.0f+1)*price);
+      return (Math.round(100*((VAT/100.0f+1)*price)))/100.0f;
     }
    
     @Override
