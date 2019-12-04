@@ -5,7 +5,7 @@ package stockcontrol;
  * A StockItem representing the product "Easy Run engine oil
  * @author g5-adams
  */
-public class EngineOil extends StockItem{
+public class EngineOil extends StockItem {
     
     public EngineOil(int quantity, float price, String stockCode) {
         super(quantity,price,stockCode);
