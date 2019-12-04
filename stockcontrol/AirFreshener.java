@@ -8,7 +8,7 @@ package stockcontrol;
 public class AirFreshener extends StockItem {
     
     public AirFreshener(int quantity, float price, String stockCode) {
-        super(quantity,price,stockCode);
+        super(quantity, price, stockCode);
     }
     
     @Override

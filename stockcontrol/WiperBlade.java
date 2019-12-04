@@ -8,7 +8,7 @@ package stockcontrol;
 public class WiperBlade extends StockItem {
     
     public WiperBlade(int quantity, float price, String stockCode) {
-        super(quantity,price,stockCode);
+        super(quantity, price, stockCode);
     }
 
     @Override

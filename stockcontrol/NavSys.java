@@ -8,7 +8,7 @@ package stockcontrol;
 public class NavSys extends StockItem {
     
     public NavSys(int quantity, float price, String stockCode) {
-        super(quantity,price,stockCode);
+        super(quantity, price, stockCode);
     }
 
     @Override

@@ -8,7 +8,7 @@ package stockcontrol;
 public class EngineOil extends StockItem {
     
     public EngineOil(int quantity, float price, String stockCode) {
-        super(quantity,price,stockCode);
+        super(quantity, price, stockCode);
     }
 
     @Override
