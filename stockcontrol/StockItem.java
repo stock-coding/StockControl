@@ -78,15 +78,19 @@ public class StockItem {
      * @return True if successful, false if an error occurred
      */
     public boolean addStock(int quantity){
-        if(quantity<1){         
+
+        if(quantity<1)
+        {         
             System.out.println("Error: must add at least 1 stock");
             return false;
         }
-        else if((quantity+this.quantity)>100){
+        else if((quantity+this.quantity)>100)
+        {
             System.out.println("Error: Can't have more than 100 total stock");
             return false;
         }
-        else { 
+        else
+        { 
             this.quantity += quantity;
             return true;
         }
@@ -99,7 +103,7 @@ public class StockItem {
      */
     public boolean sellStock(int quantity){
         
-	if(quantity < 0)
+	    if(quantity < 0)
         {
             System.out.println("Error: tried to sell negative stock!");
             return false;
@@ -130,7 +134,9 @@ public class StockItem {
      * @return The price of this Stock Item with VAT applied and rounded to 2 d.p
      */
     public float getVATPrice(){
+        /* VAT is a percentage so convert into a coefficient and then apply to the price */
         float VATPrice = (VAT / 100.0f + 1) * price;
+        /* round to 2 d.p */
         return Math.round(100 * VATPrice) / 100.0f;
     }
    
@@ -145,7 +151,7 @@ public class StockItem {
                 "\nStock description: " + getStockDescription() + "," +
                 "\nStock quantity: " + quantity + "," +
                 "\nStock price: £" + price + "," +
-                "\nStock price including VAT: £" + getVATPrice() + ",";
+                "\nStock price including VAT: £" + getVATPrice();
     }
 }
 
