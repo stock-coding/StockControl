@@ -5,60 +5,60 @@ public class TestPolymorphism
     private static void itemInstance(StockItem testItem)
     {
         System.out.println("Printing stock info");
-        System.out.println(testItem);
+        System.out.println(testItem+"\n");
         
         System.out.println("Adding 2 stock");
         testItem.addStock(2);
         System.out.println("Printing stock info");
-        System.out.println(testItem);
+        System.out.println(testItem+"\n");
         
         System.out.println("Adding 97 stock");
         testItem.addStock(97);
         System.out.println("Printing stock info");
-        System.out.println(testItem);
+        System.out.println(testItem+"\n");
         
         System.out.println("Adding 1 stock");
         testItem.addStock(1);
         System.out.println("Printing stock info");
-        System.out.println(testItem);
+        System.out.println(testItem+"\n");
         
         System.out.println("Selling 99 stock");
         testItem.sellStock(99);
         System.out.println("Printing stock info");
-        System.out.println(testItem);
+        System.out.println(testItem+"\n");
         
         System.out.println("Adding -1 stock");
         testItem.addStock(-1);
         System.out.println("Printing stock info");
-        System.out.println(testItem);
+        System.out.println(testItem+"\n");
         
         System.out.println("Selling 2 stock");
         testItem.sellStock(2);
         System.out.println("Printing stock info");
-        System.out.println(testItem);
+        System.out.println(testItem+"\n");
         
         System.out.println("Selling -1 stock");
         testItem.sellStock(-1);
         System.out.println("Printing stock info");
-        System.out.println(testItem);
+        System.out.println(testItem+"\n");
         
         System.out.println("VAT rate is " + testItem.getVAT());
         System.out.println("Printing stock info");
-        System.out.println(testItem);
+        System.out.println(testItem+"\n");
         
         System.out.println("Price: " + testItem.getPrice());
         System.out.println("Printing stock info");
-        System.out.println(testItem);
+        System.out.println(testItem+"\n");
         
         System.out.println("Setting price to 4.85");
         testItem.setPrice(4.85f);
         System.out.println("Price: " + testItem.getPrice());
         System.out.println("Printing stock info");
-        System.out.println(testItem);
+        System.out.println(testItem+"\n");
         
         System.out.println("Price with VAT is " + testItem.getVATPrice());
         System.out.println("Printing stock info");
-        System.out.println(testItem);
+        System.out.println(testItem+"\n");
     }
 
     public static void main(String[] args)
