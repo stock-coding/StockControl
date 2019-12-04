@@ -1,9 +1,8 @@
 package stockcontrol;
 
-public class TestPolymorphism
-{
-    private static void itemInstance(StockItem testItem)
-    {
+public class TestPolymorphism {
+
+    private static void itemInstance(StockItem testItem) {
         System.out.println("Printing stock info");
         System.out.println(testItem+"\n");
         
@@ -61,8 +60,7 @@ public class TestPolymorphism
         System.out.println(testItem+"\n");
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         StockItem[] stockList = new StockItem[3];
         stockList[0] = new AirFreshener(1,5.5f,"A1");
         stockList[1] = new EngineOil(1,5.5f,"E1");
