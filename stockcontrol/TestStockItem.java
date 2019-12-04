@@ -43,11 +43,9 @@ class TestResult
 * Tests the implementation of the StockItem Class
 * @author Thomas Merchant
 */
-class TestStockItem
-{
+class TestStockItem {
 
-    private static TestResult runTest(int testNum)
-    {
+    private static TestResult runTest(int testNum) {
         StockItem testItem;
         boolean passed, returned;
         String message, name;
@@ -245,8 +243,7 @@ class TestStockItem
         return new TestResult(name, passed, message);
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         //Loops though each test.
         int NUMTESTS = 12, i;
         TestResult[] results = new TestResult[NUMTESTS];

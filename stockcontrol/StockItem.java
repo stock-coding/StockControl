@@ -18,7 +18,7 @@ public class StockItem {
      * @param price
      * @param stockCode
      */
-    public StockItem(int quantity, float price, String stockCode){
+    public StockItem(int quantity, float price, String stockCode) {
         this.quantity = quantity;
         this.price = price;
         this.fixedStockCode = stockCode;
@@ -28,7 +28,7 @@ public class StockItem {
      * 
      * @return This Stock Item's fixed stock code
      */
-    public String getStockCode(){
+    public String getStockCode() {
         return fixedStockCode;
     }
 
@@ -36,7 +36,7 @@ public class StockItem {
      * 
      * @return The quantity of this Stock Item
      */
-    public int getQuantity(){
+    public int getQuantity() {
         return quantity;
     }
     
@@ -44,7 +44,7 @@ public class StockItem {
      * 
      * @param newPrice The new price for this Stock Item
      */
-    public void setPrice(float newPrice){
+    public void setPrice(float newPrice) {
         price = newPrice;
     }
 
@@ -52,7 +52,7 @@ public class StockItem {
      * 
      * @return The current price for this Stock Item
      */
-    public float getPrice(){
+    public float getPrice() {
         return price;
     }
 
@@ -60,7 +60,7 @@ public class StockItem {
      * 
      * @return The name of this Stock Item
      */
-    public String getStockName(){
+    public String getStockName() {
         return "Unknown Stock Name";
     }
 
@@ -68,7 +68,7 @@ public class StockItem {
      * 
      * @return The description of this Stock Item
      */
-    public String getStockDescription(){
+    public String getStockDescription() {
         return "Unknown Stock Description";
     }
 
@@ -77,7 +77,7 @@ public class StockItem {
      * @param quantity The amount of stock to add
      * @return True if successful, false if an error occurred
      */
-    public boolean addStock(int quantity){
+    public boolean addStock(int quantity) {
 
         if(quantity<1)
         {         
@@ -101,7 +101,7 @@ public class StockItem {
      * @param quantity The amount of stock to sell
      * @return True if successful, false if an error occurred
      */
-    public boolean sellStock(int quantity){
+    public boolean sellStock(int quantity) {
         
 	    if(quantity < 0)
         {
@@ -125,7 +125,7 @@ public class StockItem {
      * 
      * @return The VAT rate for all Stock Items
      */
-    public static float getVAT(){
+    public static float getVAT() {
         return VAT;
     }
 
@@ -133,7 +133,7 @@ public class StockItem {
      * 
      * @return The price of this Stock Item with VAT applied and rounded to 2 d.p
      */
-    public float getVATPrice(){
+    public float getVATPrice() {
         /* VAT is a percentage so convert into a coefficient and then apply to the price */
         float VATPrice = (VAT / 100.0f + 1) * price;
         /* round to 2 d.p */
@@ -145,7 +145,7 @@ public class StockItem {
      * 
      * @return A human-readable representation of this Stock Item
      */
-    public String toString(){
+    public String toString() {
         return  "Stock code: " + fixedStockCode + "," +
                 "\nStock name: " + getStockName() + "," +
                 "\nStock description: " + getStockDescription() + "," +

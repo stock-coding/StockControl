@@ -7,8 +7,8 @@ package stockcontrol;
 public class TestNavSys
 {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
+
         System.out.println("Creating a NavSys stock item with 1 units, price 1 and stock code test");
         NavSys testNavSys = new NavSys(1, 1, "test");
         System.out.println("printing stock info");
